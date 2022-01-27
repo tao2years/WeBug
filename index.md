@@ -14,8 +14,10 @@ open up new research directions for combating WeChat Mini-Program
 bugs. Based on the bug patterns found in our study, we further develop
 WeDetector to detect WeChat Mini-Program bugs. 
 
-## Bug patterns
+## Bug Patterns
 // TODO
+
+## Bugs Detected by WeDetector
 
 ## Getting Started
 WeDetector - WeChat Mini-Program Bugs Detector
