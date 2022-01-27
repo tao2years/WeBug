@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
+# Characterizing and Detecting Bugs in WeChat Mini-Programs
+Built on the WeChat social platform, WeChat Mini-Programs are widely
+used by more than 400 million users every day. Consequently, the
+reliability of Mini-Programs is particularly crucial. However, WeChat
+Mini-Programs suffer from various bugs related to execution
+environment, lifecycle management, asynchronous mechanism, etc. These
+bugs have seriously affected users' experience and caused serious
+impacts.
 
-You can use the [editor on GitHub](https://github.com/tao2years/WeBug/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+We conduct the first empirical study on 83 WeChat Mini-Program bugs,
+and perform an in-depth analysis of their root causes, impacts and
+fixes. From this study, we obtain many interesting findings that can
+open up new research directions for combating WeChat Mini-Program
+bugs. Based on the bug patterns found in our study, we further develop
+WeDetector to detect WeChat Mini-Program bugs. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Bug patterns
+// TODO
 
-### Markdown
+## Getting Started
+WeDetector - WeChat Mini-Program Bugs Detector
+### Development environment
+- Windows 10
+- Node.js v_12.18.3
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Java v_16
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- Babel v_6.26.0
+```
+npm install -g babel-cli@6.26.0
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- TAJS  
+You should download the jar files from http://www.brics.dk/TAJS/dist/.
+ And place it under the folder: dist/tajs-all.jar
 
-### Jekyll Themes
+### Testing WeChat Mini-Programs
+// TODO
+Before running code, you should put projects into folder **benchmarks**.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tao2years/WeBug/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+node analyze.js
+```
 
-### Support or Contact
+### Publication
+If you are interested in our work, you can find more details in our
+paper listed below. If you use our dateset and tool, please cite our
+paper.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**Characterizing and Detecting Bugs in WeChat Mini-Programs** [//TODO
+add paper]
+
+44th IEEE/ACM International Conference on Software Engineering (ICSE'22)
