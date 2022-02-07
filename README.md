@@ -22,10 +22,37 @@ adaptation to anomalous screens, and improper handling of return data
 in invoking asynchronous APIs. 
 
 **Pattern 1. Incorrect invocations of platform-dependent APIs.** 
-Some APIs in the Mini-Program framework are OS-specific. 
-Invoking these platform-dependent APIs without considering different OS can introduce WeBugs. 
-Therefore, developers should determine target operating system before using these
-APIs. We summarize four kinds of platform-dependent APIs in this table.
+Some APIs in the Mini-Program framework are OS-specific. Invoking
+these platform-dependent APIs without considering different OS can
+introduce WeBugs. Therefore, developers should determine target
+operating system before using these APIs. We summarize four kinds of
+platform-dependent APIs in this table.
+![Pattern-1](https://github.com/tao2years/DSServer/blob/master/img/%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%9B%BE.png)
+
+**Pattern 2. Incomplete layout adaptation to anomalous screens.** 
+Although the layout of Mini-Programs is self-adaptive, there are also
+three abnormal rendering bugs. These bugs arise in specific devices
+due to their anomalous screens. For some devices, e.g., Figure 3a, all
+their screen can be used to render applications. However, for some
+devices, e.g., Figure 3b, parts of their screen are occupied by some
+components, e.g, camera. Thus, rendering applications on the
+restricted areas can cause abnormal displays.
+![Pattern-2](https://github.com/tao2years/DSServer/blob/master/img/%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%9B%BE.png)
+
+**Pattern 3. Improper handling of return data in invoking asynchronous APIs.** 
+In the WeChat Mini-Program framework, most APIs are used in an
+asynchronous way. The *success* and *fail* callbacks are
+defined to handle the return data for successful or failed
+invocations. However, the type or data structure for the return data
+may vary. If developers are unaware of their differences, WeBugs can
+occur. Here shows such an example. Function *getList* calls the
+function *req* (Line 3) to send a request. If the request
+fails, it triggers the *fail* callback function (Line 17), and
+returns a boolean data *false*. Since function *getList*
+does not check whether it is a valid value (e.g., Line 4), and
+operations on a boolean data *false* can cause a *TypeError*.
+![Pattern-3](https://github.com/tao2years/DSServer/blob/master/img/%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%9B%BE.png)
+
 
 ## Getting Started
 WeDetector - WeChat Mini-Program Bugs Detector
@@ -56,8 +83,7 @@ If you are interested in our work, you can find more details in our
 paper listed below. If you use our dateset and tool, please cite our
 paper.
 
-**Characterizing and Detecting Bugs in WeChat Mini-Programs** [//TODO
-add paper]
+**Characterizing and Detecting Bugs in WeChat Mini-Programs** [To appear]
 
 44th IEEE/ACM International Conference on Software Engineering (ICSE'22)
 
