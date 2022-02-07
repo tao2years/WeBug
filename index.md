@@ -28,7 +28,7 @@ these platform-dependent APIs without considering different OS can
 introduce WeBugs. Therefore, developers should determine target
 operating system before using these APIs. We summarize four kinds of
 platform-dependent APIs in this table.
-![Pattern-1](https://github.com/tao2years/WeBug/blob/main/pic/pattern1.png)
+![Pattern-1](https://github.com/tao2years/WeBug/blob/gh-pages/pattern1.png)
 
 **Pattern 2. Incomplete layout adaptation to anomalous screens.** 
 
@@ -39,7 +39,7 @@ their screen can be used to render applications. However, for some
 devices, e.g., Figure 3b, parts of their screen are occupied by some
 components, e.g, camera. Thus, rendering applications on the
 restricted areas can cause abnormal displays.
-![Pattern-2](https://github.com/tao2years/WeBug/blob/main/pic/pattern2.png)
+![Pattern-2](https://github.com/tao2years/WeBug/blob/gh-pages/pattern2.png)
 
 **Pattern 3. Improper handling of return data in invoking asynchronous APIs.** 
 
@@ -54,7 +54,7 @@ fails, it triggers the *fail* callback function (Line 17), and
 returns a boolean data *false*. Since function *getList*
 does not check whether it is a valid value (e.g., Line 4), and
 operations on a boolean data *false* can cause a *TypeError*.
-![Pattern-3](https://github.com/tao2years/WeBug/blob/main/pic/pattern3.png)
+![Pattern-3](https://github.com/tao2years/WeBug/blob/gh-pages/pattern3.png)
 
 
 ## Getting Started
