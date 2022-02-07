@@ -39,7 +39,7 @@ their screen can be used to render applications. However, for some
 devices, e.g., Figure 3b, parts of their screen are occupied by some
 components, e.g, camera. Thus, rendering applications on the
 restricted areas can cause abnormal displays.
-![Pattern-2](https://github.com/tao2years/WeBug/blob/main/pic/pattern2.png){:height="70%" width="70%"}
+![Pattern-2](https://github.com/tao2years/WeBug/blob/main/pic/pattern2.png)
 
 **Pattern 3. Improper handling of return data in invoking asynchronous APIs.** 
 
@@ -54,7 +54,7 @@ fails, it triggers the *fail* callback function (Line 17), and
 returns a boolean data *false*. Since function *getList*
 does not check whether it is a valid value (e.g., Line 4), and
 operations on a boolean data *false* can cause a *TypeError*.
-![Pattern-3](https://github.com/tao2years/WeBug/blob/main/pic/pattern3.png){:height="70%" width="70%"}
+![Pattern-3](https://github.com/tao2years/WeBug/blob/main/pic/pattern3.png)
 
 
 ## Getting Started
