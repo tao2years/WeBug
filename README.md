@@ -15,7 +15,17 @@ bugs. Based on the bug patterns found in our study, we further develop
 WeDetector to detect WeChat Mini-Program bugs. 
 
 ## Bug patterns
-// TODO
+Our empirical study on WeBugs has revealed several potential patterns
+to detect WeBugs. Among them, we summarize three common bug patterns,
+i.e., incorrect invocations platform-dependent APIs, incomplete layout
+adaptation to anomalous screens, and improper handling of return data
+in invoking asynchronous APIs. 
+
+**Pattern 1. Incorrect invocations of platform-dependent APIs.** 
+Some APIs in the Mini-Program framework are OS-specific. 
+Invoking these platform-dependent APIs without considering different OS can introduce WeBugs. 
+Therefore, developers should determine target operating system before using these
+APIs. We summarize four kinds of platform-dependent APIs in this table.
 
 ## Getting Started
 WeDetector - WeChat Mini-Program Bugs Detector
@@ -35,7 +45,6 @@ You should download the jar files from http://www.brics.dk/TAJS/dist/.
  And place it under the folder: dist/tajs-all.jar
 
 ### Testing WeChat Mini-Programs
-// TODO
 Before running code, you should put projects into folder **benchmarks**.
 
 ```
