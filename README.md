@@ -86,7 +86,7 @@ If you are interested in our work, you can find more details in our
 paper listed below. If you use our dateset and tool, please cite our
 paper.
 
-**Characterizing and Detecting Bugs in WeChat Mini-Programs** [To appear]
+**Characterizing and Detecting Bugs in WeChat Mini-Programs** [PDF](http://www.tcse.cn/~wsdou/papers/2022-icse-webug.pdf)
 
 44th IEEE/ACM International Conference on Software Engineering (ICSE'22)
 
